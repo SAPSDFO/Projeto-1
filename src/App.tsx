@@ -52,16 +52,16 @@ function App() {
   };
 
   const carouselImages = [
+    '/1 (7).jpg',
+    '/1 (9).jpg',
+    '/1 (10).jpg',
+    '/1 (11).jpg',
+    '/1 (16).jpg',
     '/2.png',
     '/3.png',
     '/4.png',
     '/5.png',
     '/Design sem nome.png',
-    '/6.png',
-    '/7.png',
-    '/8.png',
-    '/9.png',
-    '/10.png',
   ];
 
   if (showPreloader) {
