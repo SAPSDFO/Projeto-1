@@ -9,7 +9,7 @@ declare global {
 }
 
 function App() {
-  const [currentStage, setCurrentStage] = useState<'welcome' | 'carousel'>('welcome');
+  const [currentStage, setCurrentStage] = useState<'welcome' | 'carousel' | 'packages'>('welcome');
   const [showOffer, setShowOffer] = useState(false);
   const [showPreloader, setShowPreloader] = useState(true);
 
@@ -35,20 +35,8 @@ function App() {
     setCurrentStage('carousel');
   };
 
-  const handleUnlockClick = () => {
-    // Track Facebook Pixel Lead event
-    if (typeof window !== 'undefined' && window.fbq) {
-      window.fbq('track', 'Lead', {
-        content_name: 'Unlock Premium Content',
-        content_category: 'Premium Access',
-        value: 14.90,
-        currency: 'BRL'
-      });
-      console.log('Facebook Pixel Lead event tracked');
-    }
-    
-    // Redirect to Telegram
-    window.open('https://t.me/+xM4L7R1H260wYTMx', '_blank');
+  const handleChoosePackage = () => {
+    setCurrentStage('packages');
   };
 
   const carouselImages = [
@@ -140,12 +128,82 @@ function App() {
 
               <button 
                 className="unlock-button"
-                onClick={handleUnlockClick}
+                onClick={handleChoosePackage}
               >
-                QUERO DESBLOQUEAR TUDO AGORA 🔓
+                ESCOLHER PACOTE 🔓
               </button>
             </div>
           )}
+        </div>
+      )}
+
+      {currentStage === 'packages' && (
+        <div className="packages-stage">
+          <div className="packages-content">
+            <h1 className="packages-title">Escolha seu pacote</h1>
+            
+            <div className="packages-grid">
+              {/* Pacote 1 - Pecado Doce */}
+              <div className="package-card">
+                <div className="package-header">
+                  <h3 className="package-name">PECADO DOCE</h3>
+                  <div className="package-price">R$14,90</div>
+                </div>
+                <div className="package-content-list">
+                  <p className="package-items">10 vídeos + 15 fotos</p>
+                  <p className="package-description">Sozinha, molhadinha e gemendo só pra ti</p>
+                </div>
+                <a 
+                  href="https://wa.me/5511972781142?text=Quero%20o%20pacote%20PECADO%20DOCE%20de%20R%2414%2C90!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="package-button"
+                >
+                  ADQUIRIR PECADO DOCE
+                </a>
+              </div>
+
+              {/* Pacote 2 - Safadinha Sem Filtro */}
+              <div className="package-card featured">
+                <div className="package-header">
+                  <h3 className="package-name">SAFADINHA SEM FILTRO</h3>
+                  <div className="package-price">R$39,90</div>
+                </div>
+                <div className="package-content-list">
+                  <p className="package-items">20 vídeos + 35 fotos</p>
+                  <p className="package-description">Masturbação, sexo, oral, levinho na boquinha</p>
+                </div>
+                <a 
+                  href="https://wa.me/5511972781142?text=Quero%20o%20pacote%20SAFADINHA%20SEM%20FILTRO%20de%20R%2439%2C90!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="package-button"
+                >
+                  ADQUIRIR SAFADINHA SEM FILTRO
+                </a>
+              </div>
+
+              {/* Pacote 3 - Acesso Vitalício */}
+              <div className="package-card premium">
+                <div className="package-header">
+                  <h3 className="package-name">ACESSO VITALÍCIO</h3>
+                  <div className="package-price">R$97,90</div>
+                </div>
+                <div className="package-content-list">
+                  <p className="package-items">+100 vídeos liberados</p>
+                  <p className="package-description">Anal, boquete, sentando gostoso até gozar</p>
+                </div>
+                <a 
+                  href="https://wa.me/5511972781142?text=Quero%20o%20pacote%20ACESSO%20VITALICIO%20de%20R%2497%2C90!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="package-button"
+                >
+                  ADQUIRIR ACESSO VITALÍCIO
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </div>

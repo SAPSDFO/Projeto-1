@@ -720,6 +720,284 @@ body::after {
     -1px -1px 3px rgba(0, 255, 255, 0.3);
 }
 
+/* Packages Stage */
+.packages-stage {
+  min-height: 100vh;
+  background: 
+    radial-gradient(ellipse at top left, rgba(75, 0, 130, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, rgba(139, 69, 19, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(255, 0, 85, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(25, 25, 112, 0.2) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 25%, #0f0f0f 50%, #1a1a0a 75%, #0a0a0a 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.packages-stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 0, 85, 0.2) 0%, rgba(255, 0, 85, 0.1) 25%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.18) 0%, rgba(138, 43, 226, 0.08) 25%, transparent 50%),
+    radial-gradient(circle at 30% 80%, rgba(0, 255, 255, 0.12) 0%, rgba(0, 255, 255, 0.06) 25%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 30%, transparent 60%);
+  filter: blur(100px);
+  z-index: 1;
+  animation: enhanced-aurora 12s ease-in-out infinite alternate;
+}
+
+.packages-content {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.packages-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ff0055;
+  text-shadow: 
+    0 0 15px rgba(255, 0, 85, 0.8),
+    0 0 30px rgba(255, 0, 85, 0.4),
+    0 0 45px rgba(255, 0, 85, 0.2),
+    2px 2px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.package-card {
+  background: 
+    linear-gradient(135deg, rgba(255, 0, 85, 0.1) 0%, rgba(138, 43, 226, 0.1) 100%),
+    rgba(0, 0, 0, 0.8);
+  border: 2px solid rgba(255, 0, 85, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-in-out;
+  backdrop-filter: blur(10px);
+}
+
+.package-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 0, 85, 0.05), rgba(138, 43, 226, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.package-card:hover::before {
+  opacity: 1;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 0, 85, 0.6);
+  box-shadow: 
+    0 20px 40px rgba(255, 0, 85, 0.3),
+    0 0 60px rgba(255, 0, 85, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.package-card.featured {
+  border-color: rgba(255, 215, 0, 0.6);
+  background: 
+    linear-gradient(135deg, rgba(255, 215, 0, 0.15) 0%, rgba(255, 0, 85, 0.1) 100%),
+    rgba(0, 0, 0, 0.8);
+  transform: scale(1.05);
+}
+
+.package-card.featured::after {
+  content: 'MAIS POPULAR';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.package-card.premium {
+  border-color: rgba(138, 43, 226, 0.6);
+  background: 
+    linear-gradient(135deg, rgba(138, 43, 226, 0.15) 0%, rgba(75, 0, 130, 0.1) 100%),
+    rgba(0, 0, 0, 0.8);
+}
+
+.package-header {
+  margin-bottom: 1.5rem;
+}
+
+.package-name {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  color: #ff0055;
+  text-shadow: 
+    0 0 10px rgba(255, 0, 85, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.package-card.featured .package-name {
+  color: #FFD700;
+  text-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.package-card.premium .package-name {
+  color: #8A2BE2;
+  text-shadow: 
+    0 0 10px rgba(138, 43, 226, 0.6),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.package-price {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #00ff88;
+  text-shadow: 
+    0 0 15px rgba(0, 255, 136, 0.8),
+    0 0 30px rgba(0, 255, 136, 0.4),
+    2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.package-content-list {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.package-items {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.package-description {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  line-height: 1.5;
+  color: rgba(245, 245, 245, 0.8);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.package-button {
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #ff0055 0%, #cc0044 50%, #aa0033 100%);
+  color: #fff;
+  border: 2px solid rgba(255, 0, 85, 0.6);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23ff0055" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10"/></svg>') 12 12, pointer;
+  box-shadow: 
+    0 0 20px rgba(255, 0, 85, 0.4),
+    0 0 40px rgba(255, 0, 85, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.package-card.featured .package-button {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+  color: #000;
+  border-color: rgba(255, 215, 0, 0.8);
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.4),
+    0 0 40px rgba(255, 215, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.package-card.premium .package-button {
+  background: linear-gradient(135deg, #8A2BE2 0%, #6A1B9A 50%, #4A148C 100%);
+  border-color: rgba(138, 43, 226, 0.8);
+  box-shadow: 
+    0 0 20px rgba(138, 43, 226, 0.4),
+    0 0 40px rgba(138, 43, 226, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.package-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.package-button:hover::before {
+  left: 100%;
+}
+
+.package-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 30px rgba(255, 0, 85, 0.6),
+    0 0 60px rgba(255, 0, 85, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.package-card.featured .package-button:hover {
+  box-shadow: 
+    0 0 30px rgba(255, 215, 0, 0.6),
+    0 0 60px rgba(255, 215, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.package-card.premium .package-button:hover {
+  box-shadow: 
+    0 0 30px rgba(138, 43, 226, 0.6),
+    0 0 60px rgba(138, 43, 226, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
 /* Base Animations */
 @keyframes fadeIn {
   from {
@@ -795,6 +1073,19 @@ body::after {
     width: 60px;
     height: 60px;
   }
+
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .package-card.featured {
+    transform: none;
+  }
+
+  .packages-stage {
+    padding: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -825,13 +1116,18 @@ body::after {
     width: 50px;
     height: 50px;
   }
+
+  .package-card {
+    padding: 1.5rem;
+  }
 }
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
   .welcome-title,
   .welcome-subtitle,
-  .offer-text {
+  .offer-text,
+  .packages-title {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   }
 }
