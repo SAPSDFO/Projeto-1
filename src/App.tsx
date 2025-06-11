@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-// Declare fbq function for TypeScript
-declare global {
-  interface Window {
-    fbq: (action: string, event: string, parameters?: any) => void;
-  }
-}
-
 function App() {
   const [currentStage, setCurrentStage] = useState<'welcome' | 'carousel' | 'packages'>('welcome');
   const [showOffer, setShowOffer] = useState(false);
