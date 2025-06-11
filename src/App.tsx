@@ -111,7 +111,7 @@ function App() {
           {showOffer && (
             <div className="offer-container">
               <p className="offer-text">
-                Gostou do que viu? 😏 Isso foi só uma provinha, amor...
+                Escolhe um pacote clicando no botão "ESCOLHER PACOTE" abaixo e vem para o meu WHATSAPP 💕
               </p>
               
               <div className="price-container">
