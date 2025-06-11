@@ -52,16 +52,16 @@ function App() {
   };
 
   const carouselImages = [
-    '/public/2.png',
-    '/public/3.png',
-    '/public/4.png',
-    '/public/5.png',
-    '/public/Design sem nome.png',
-    '/public/6.png',
-    '/public/7.png',
-    '/public/8.png',
-    '/public/9.png',
-    '/public/10.png',
+    '/2.png',
+    '/3.png',
+    '/4.png',
+    '/5.png',
+    '/Design sem nome.png',
+    '/6.png',
+    '/7.png',
+    '/8.png',
+    '/9.png',
+    '/10.png',
   ];
 
   if (showPreloader) {
@@ -85,7 +85,7 @@ function App() {
           <div className="welcome-content">
             <div className="profile-image-container">
               <img 
-                src="/public/GXT1UUBWwAAL20n.jpg" 
+                src="/GXT1UUBWwAAL20n.jpg" 
                 alt="Profile" 
                 className="profile-image"
                 loading="lazy"
