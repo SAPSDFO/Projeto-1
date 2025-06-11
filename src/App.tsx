@@ -44,10 +44,11 @@ function App() {
         value: 14.90,
         currency: 'BRL'
       });
+      console.log('Facebook Pixel Lead event tracked');
     }
     
-    // Add your redirect logic here
-    console.log('Lead event tracked - User clicked unlock button');
+    // Redirect to Telegram
+    window.open('https://t.me/+xM4L7R1H260wYTMx', '_blank');
   };
 
   const carouselImages = [
