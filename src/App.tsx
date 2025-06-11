@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+// Declare fbq function for TypeScript
+declare global {
+  interface Window {
+    fbq: (action: string, event: string, parameters?: any) => void;
+  }
+}
+
 function App() {
   const [currentStage, setCurrentStage] = useState<'welcome' | 'carousel'>('welcome');
   const [showOffer, setShowOffer] = useState(false);
@@ -26,6 +33,21 @@ function App() {
 
   const handleStartExperience = () => {
     setCurrentStage('carousel');
+  };
+
+  const handleUnlockClick = () => {
+    // Track Facebook Pixel Lead event
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead', {
+        content_name: 'Unlock Premium Content',
+        content_category: 'Premium Access',
+        value: 14.90,
+        currency: 'BRL'
+      });
+    }
+    
+    // Add your redirect logic here
+    console.log('Lead event tracked - User clicked unlock button');
   };
 
   const carouselImages = [
@@ -115,7 +137,10 @@ function App() {
                 <span className="new-price">R$14,90</span>
               </div>
 
-              <button className="unlock-button">
+              <button 
+                className="unlock-button"
+                onClick={handleUnlockClick}
+              >
                 QUERO DESBLOQUEAR TUDO AGORA 🔓
               </button>
             </div>
