@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import { ArrowDown } from 'lucide-react';
 
 function App() {
   const [currentStage, setCurrentStage] = useState<'welcome' | 'carousel' | 'packages'>('welcome');
@@ -111,12 +112,11 @@ function App() {
           {showOffer && (
             <div className="offer-container">
               <p className="offer-text">
-                Escolhe um pacote clicando no botão "ESCOLHER PACOTE" abaixo e vem para o meu WHATSAPP 💕
+                Gostou das prévias amor? isso é só fotos, eu tenho vídeos fazendo de tudo, quer ver? clica no botão abaixo
               </p>
               
-              <div className="price-container">
-                <span className="old-price">R$37,90</span>
-                <span className="new-price">R$14,90</span>
+              <div className="arrow-container">
+                <ArrowDown size={32} className="arrow-icon" />
               </div>
 
               <button 
@@ -140,7 +140,10 @@ function App() {
               <div className="package-card">
                 <div className="package-header">
                   <h3 className="package-name">PECADO DOCE</h3>
-                  <div className="package-price">R$11,90</div>
+                  <div className="price-section">
+                    <div className="old-price">R$39,90</div>
+                    <div className="package-price">R$11,90</div>
+                  </div>
                 </div>
                 <div className="package-content-list">
                   <p className="package-items">10 vídeos + 15 fotos</p>
@@ -167,7 +170,10 @@ function App() {
               <div className="package-card featured">
                 <div className="package-header">
                   <h3 className="package-name">SAFADINHA SEM FILTRO</h3>
-                  <div className="package-price">R$21,80</div>
+                  <div className="price-section">
+                    <div className="old-price">R$74,70</div>
+                    <div className="package-price">R$21,80</div>
+                  </div>
                 </div>
                 <div className="package-content-list">
                   <p className="package-items">20 vídeos + 35 fotos</p>
@@ -195,7 +201,10 @@ function App() {
               <div className="package-card premium">
                 <div className="package-header">
                   <h3 className="package-name">ACESSO VITALÍCIO</h3>
-                  <div className="package-price">R$33,60</div>
+                  <div className="price-section">
+                    <div className="old-price">R$121,80</div>
+                    <div className="package-price">R$33,60</div>
+                  </div>
                 </div>
                 <div className="package-content-list">
                   <p className="package-items">+100 vídeos liberados</p>
