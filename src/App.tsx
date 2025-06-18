@@ -140,19 +140,26 @@ function App() {
               <div className="package-card">
                 <div className="package-header">
                   <h3 className="package-name">PECADO DOCE</h3>
-                  <div className="package-price">R$14,90</div>
+                  <div className="package-price">R$11,90</div>
                 </div>
                 <div className="package-content-list">
                   <p className="package-items">10 vídeos + 15 fotos</p>
-                  <p className="package-description">Sozinha, molhadinha e gemendo só pra ti</p>
+                  <div className="package-description">
+                    <p><strong>Conteúdo:</strong></p>
+                    <p>Sexo</p>
+                    <p>Boquete</p>
+                    <p>Masturbação</p>
+                    <p>Exibição</p>
+                    <p>+1 Bônus</p>
+                  </div>
                 </div>
                 <a 
-                  href="https://wa.me/5511972781142?text=Quero%20o%20pacote%20PECADO%20DOCE%20de%20R%2414%2C90!"
+                  href="https://pay.pagbrasilpagamento.com/checkout/78e13c83-30e3-40c3-a9b4-3f960348d780"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="package-button"
                 >
-                  ADQUIRIR PECADO DOCE
+                  ADQUIRIR
                 </a>
               </div>
 
@@ -160,19 +167,27 @@ function App() {
               <div className="package-card featured">
                 <div className="package-header">
                   <h3 className="package-name">SAFADINHA SEM FILTRO</h3>
-                  <div className="package-price">R$39,90</div>
+                  <div className="package-price">R$21,80</div>
                 </div>
                 <div className="package-content-list">
                   <p className="package-items">20 vídeos + 35 fotos</p>
-                  <p className="package-description">Masturbação, sexo, oral, levinho na boquinha</p>
+                  <div className="package-description">
+                    <p><strong>Conteúdo:</strong></p>
+                    <p>Sexo</p>
+                    <p>Boquete</p>
+                    <p>Masturbação</p>
+                    <p>Exibição</p>
+                    <p>Anal</p>
+                    <p>+5 Bônus</p>
+                  </div>
                 </div>
                 <a 
-                  href="https://wa.me/5511972781142?text=Quero%20o%20pacote%20SAFADINHA%20SEM%20FILTRO%20de%20R%2439%2C90!"
+                  href="https://pay.pagbrasilpagamento.com/checkout/5e52ad7e-c329-476c-830f-23ce9d8aebb1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="package-button"
                 >
-                  ADQUIRIR SAFADINHA SEM FILTRO
+                  ADQUIRIR
                 </a>
               </div>
 
@@ -180,19 +195,28 @@ function App() {
               <div className="package-card premium">
                 <div className="package-header">
                   <h3 className="package-name">ACESSO VITALÍCIO</h3>
-                  <div className="package-price">R$97,90</div>
+                  <div className="package-price">R$33,60</div>
                 </div>
                 <div className="package-content-list">
                   <p className="package-items">+100 vídeos liberados</p>
-                  <p className="package-description">Anal, boquete, sentando gostoso até gozar</p>
+                  <div className="package-description">
+                    <p><strong>Conteúdo:</strong></p>
+                    <p>Sexo</p>
+                    <p>Boquete</p>
+                    <p>Masturbação</p>
+                    <p>Exibição</p>
+                    <p>Anal</p>
+                    <p>Menage</p>
+                    <p>+10 Bônus</p>
+                  </div>
                 </div>
                 <a 
-                  href="https://wa.me/5511972781142?text=Quero%20o%20pacote%20ACESSO%20VITALICIO%20de%20R%2497%2C90!"
+                  href="https://pay.pagbrasilpagamento.com/checkout/755b70dd-3494-42cf-85f3-717aa70ab09d"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="package-button"
                 >
-                  ADQUIRIR ACESSO VITALÍCIO
+                  ADQUIRIR
                 </a>
               </div>
             </div>
