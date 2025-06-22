@@ -157,7 +157,7 @@ function App() {
                   </div>
                 </div>
                 <a 
-                  href="https://pay.pagbrasilpagamento.com/checkout/78e13c83-30e3-40c3-a9b4-3f960348d780"
+                  href="https://pay.transacaobrasil.com/checkout/78e13c83-30e3-40c3-a9b4-3f960348d780"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="package-button"
@@ -188,7 +188,7 @@ function App() {
                   </div>
                 </div>
                 <a 
-                  href="https://pay.pagbrasilpagamento.com/checkout/5e52ad7e-c329-476c-830f-23ce9d8aebb1"
+                  href="https://pay.transacaobrasil.com/checkout/5e52ad7e-c329-476c-830f-23ce9d8aebb1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="package-button"
@@ -220,7 +220,7 @@ function App() {
                   </div>
                 </div>
                 <a 
-                  href="https://pay.pagbrasilpagamento.com/checkout/755b70dd-3494-42cf-85f3-717aa70ab09d"
+                  href="https://pay.transacaobrasil.com/checkout/755b70dd-3494-42cf-85f3-717aa70ab09d"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="package-button"
